@@ -377,7 +377,7 @@ class OrderAPIView(APIView):
     # 修改账单信息
     def put(self, request, order_id):
         order = get_object_or_404(Order, order_number=order_id)
-        serializer = BillSerializer(order, data=request.data)
+        serializer = OrderSerializer(order, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -387,7 +387,7 @@ class OrderAPIView(APIView):
     # 部分修改账单信息
     def patch(self, request, order_id):
         order = get_object_or_404(Order, order_number=order_id)
-        serializer = BillSerializer(order, data=request.data, partial=True)
+        serializer = OrderSerializer(order, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)

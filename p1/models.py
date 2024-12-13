@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import timedelta
+from django.contrib.auth.hashers import make_password
 
 # Create your models here.
 
@@ -15,12 +16,17 @@ class User(models.Model):
 
     id = models.AutoField(primary_key=True)  # 用户编号
     username = models.CharField(max_length=50)  # 用户名
-    password = models.CharField(max_length=50)  # 用户密码
+    password = models.CharField(max_length=128)  # 用户密码
     role = models.CharField(max_length=20, choices=ROLE_CHOICES)  # 用户角色
     branch_id = models.IntegerField(
         null=True, blank=True
     )  # 当用户为前台或者店长时所属分店编号
-
+    def save(self, *args, **kwargs):
+        # 如果密码未加密，则加密密码
+        if not self.password.startswith("pbkdf2_sha256$"):
+            self.password = make_password(self.password)
+        super().save(*args, **kwargs)
+    
     def __str__(self):
         return f"用户编号:{self.id},用户名:{self.username}"
 
@@ -34,6 +40,8 @@ class Commodity(models.Model):
     id = models.AutoField(primary_key=True)  # 商品编号
     Commodityname = models.CharField(max_length=50)  # 商品名称
     price = models.DecimalField(max_digits=10, decimal_places=2)  # 商品价格
+    number = models.DecimalField(max_digits=10, decimal_places=0)  # 商品数量
+    subbranch_id = models.ForeignKey("Subbranch", on_delete=models.CASCADE)#所属分店
     discount = models.DecimalField(
         max_digits=4, decimal_places=3, default=1
     )  # 商品折扣
@@ -50,6 +58,8 @@ class FestivalDiscount(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     discount = models.DecimalField(max_digits=3, decimal_places=2)
+    start_time = models.DateTimeField()  # 优惠开始时间
+    end_time = models.DateTimeField()  # 优惠结束时间
 
     class Meta:
         db_table = "节日折扣"
@@ -113,11 +123,13 @@ class Bill(models.Model):
     ]
     id = models.AutoField(primary_key=True)  # 账单编号
     userid = models.ForeignKey(User, on_delete=models.CASCADE)  # 用户编号
-    consumption = models.JSONField()  # 消费，以json格式存储{商品编号:消费数量}
+    orderid = models.ForeignKey("Order", on_delete=models.CASCADE)  
+    consumption = models.JSONField(null=True, blank=True)  # 消费，以json格式存储{商品编号:消费数量}
     total_price = models.DecimalField(max_digits=10, decimal_places=2)  # 总价格
     room = models.ForeignKey(Room, on_delete=models.CASCADE)  # 房间编号
     check_in_time = models.DateTimeField()  # 入住时间
     check_out_time = models.DateTimeField()  # 退房时间
+    subbranch_id = models.ForeignKey("Subbranch", on_delete=models.CASCADE)#所属分店
     number_of_guest = models.DecimalField(max_digits=3, decimal_places=0)  # 入住人数
     payment_status = models.CharField(
         max_length=10, choices=PAYMENT_STATUS_CHOICES, default="unpaid"
@@ -126,8 +138,8 @@ class Bill(models.Model):
         max_length=10, choices=FINISH_STATUS_CHOICES, default="unfinish"
     )  # 完成状态
     festivaldiscount = models.ForeignKey(
-        FestivalDiscount, null=True, on_delete=models.CASCADE
-    )  # 节日优惠，没有节日就为空
+        FestivalDiscount, null=True, blank=True, on_delete=models.CASCADE
+    )   # 节日优惠，没有节日就为空
 
     def __str__(self):
         return f"账单编号:{self.id},消费者:{self.userid}"
@@ -167,10 +179,11 @@ class Order(models.Model):
 
     order_number = models.AutoField(primary_key=True)  # 自动递增的主键
     number_of_guests = models.IntegerField()  # 入住人数
-    room_number = models.IntegerField()  # 房间编号
+    room_number = models.ForeignKey(Room, on_delete=models.CASCADE)  # 房间编号
     check_in_date = models.DateTimeField()  # 入住日期
     check_out_date = models.DateTimeField()  # 退房日期
     booked_user = models.ForeignKey(User, on_delete=models.CASCADE)  # 外键指向用户
+    subbranch_id = models.ForeignKey("Subbranch", on_delete=models.CASCADE)#所属分店
     order_status = models.IntegerField(
         choices=ORDER_STATUS_CHOICES, default=0
     )  # 订单状态，默认值为 0

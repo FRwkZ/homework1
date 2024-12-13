@@ -10,6 +10,19 @@ from .views import PersonInfoAPIView
 from .views import BillAPIView
 from .views import OrderAPIView
 from .views import FestivalDiscountAPIView
+from .view2 import LoginAPIView
+from .view2 import ComsumeAPIView
+from .view2 import OrderByUserAPIView
+from .view2 import OrderByUser_ReceptionistAPIView
+from .view2 import OrderByReceptionistAPIView
+from .view2 import SubbranchRoomsAPIView
+from .view2 import SubbranchCommodityAPIView
+from .view2 import SubbranchOrderAPIView
+from .view2 import OrderPersonInfoAPIView
+from .view2 import CheckFestivalDiscountAPIView
+from .view2 import SubbranchBillAPIView
+from .view2 import UserBillAPIView
+from .view2 import Check_OutAPIView
 
 # 导入所有需要的视图
 
@@ -33,4 +46,19 @@ urlpatterns = [
     path("order/<int:order_id>/", OrderAPIView.as_view()),
     path("festival-discounts/", FestivalDiscountAPIView.as_view()),
     path("festival-discounts/<int:discount_id>/", FestivalDiscountAPIView.as_view()),
+    path("login/", LoginAPIView.as_view()),  # 配置登录路由
+    path("Comsume/", ComsumeAPIView.as_view()),
+    path("OrderByUser/", OrderByUserAPIView.as_view()),
+    path("OrderByUser_Receptionist/", OrderByUser_ReceptionistAPIView.as_view()),
+    path("OrderByReceptionist/", OrderByReceptionistAPIView.as_view()),
+    path("SubbranchRooms/<int:subbranch_id>/", SubbranchRoomsAPIView.as_view()),
+    path(
+        "Subbranch-Commodity/<int:subbranch_id>/", SubbranchCommodityAPIView.as_view()
+    ),
+    path("Subbranch-Order/<int:subbranch_id>/", SubbranchOrderAPIView.as_view()),
+    path("Subbranch-Bill/<int:subbranch_id>/", SubbranchBillAPIView.as_view()),
+    path("Order-PersonInfo/<int:order_number>/", OrderPersonInfoAPIView.as_view()),
+    path("check-festival-discount/", CheckFestivalDiscountAPIView.as_view()),
+    path("User-Bill/<int:user_id>/", UserBillAPIView.as_view()),
+    path("Check-Out/<int:bill_id>/", Check_OutAPIView.as_view()),
 ]
