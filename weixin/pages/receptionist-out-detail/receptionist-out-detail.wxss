@@ -1,0 +1,49 @@
+/* pages/receptionist-out-detail/receptionist-out-detail.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+  background-color: #f0f4f8;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx;
+  background-color: #ffffff;
+  padding: 35rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  width: 90%;
+}
+
+.bill-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  text-align: left;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8rpx;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background-color: #43a047;
+}

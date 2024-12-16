@@ -1,0 +1,82 @@
+/* pages/reservation/reservation.wxss */
+
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+  background-color: #f0f4f8; /* 浅蓝灰背景 */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx; /* 项目间距 */
+  background-color: #ffffff; /* 白色背景 */
+  padding: 35rpx; /* 内边距 */
+  border-radius: 20rpx; /* 圆角 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+  width: 90%; /* 自适应宽度 */
+}
+
+.person-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx; /* 输入框间距 */
+  align-items: flex-start; /* 左对齐 */
+}
+
+.person-input input {
+  width: 100%;
+  padding: 20rpx; /* 输入框内边距 */
+  font-size: 30rpx; /* 字体大小 */
+  border: 1rpx solid #ddd; /* 边框颜色 */
+  border-radius: 10rpx; /* 圆角 */
+  background-color: #f9f9f9; /* 浅灰背景 */
+}
+
+.person-input input:focus {
+  border-color: #4caf50; /* 聚焦时边框变绿 */
+  background-color: #ffffff; /* 聚焦时背景变白 */
+}
+
+button {
+  width: 100%;
+  padding: 20rpx; /* 按钮内边距 */
+  font-size: 32rpx; /* 字体大小 */
+  font-weight: bold;
+  color: #ffffff; /* 白色字体 */
+  background-color: #4caf50; /* 绿色背景 */
+  border: none;
+  border-radius: 10rpx; /* 圆角 */
+  cursor: pointer;
+  box-shadow: 0 3rpx 10rpx rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #43a047; /* 鼠标悬停时按钮背景变深 */
+  box-shadow: 0 5rpx 15rpx rgba(0, 0, 0, 0.2); /* 鼠标悬停时阴影增强 */
+}
+
+picker {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #333;
+  background-color: #f9f9f9; /* 浅灰背景 */
+  border: 1rpx solid #ddd; /* 边框颜色 */
+  border-radius: 10rpx; /* 圆角 */
+  text-align: left; /* 左对齐 */
+  margin-bottom: 20rpx; /* 间隙 */
+}
+
+.picker-view{
+  padding: 10rpx;
+  color: #666; /* 默认字体颜色 */
+  gap:15rpx;
+}
+
+picker view:active {
+  color: #4caf50; /* 选中后字体变绿 */
+}

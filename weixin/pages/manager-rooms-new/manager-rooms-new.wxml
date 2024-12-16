@@ -1,0 +1,50 @@
+<!--pages/manager-rooms-new/manager-rooms-new.wxml-->
+<view class="container">
+  <view class="form-group">
+    <picker
+      bindchange="onRoomTypeChange"
+      value="{{roomTypeIndex}}"
+      range="{{roomTypeOptions}}"
+    >
+      <view class="picker">房型: {{roomTypeOptions[roomTypeIndex] || "请选择"}}</view>
+    </picker>
+  </view>
+
+  <view class="form-group">
+    <input
+      placeholder="请输入价格"
+      type="number"
+      value="{{room.price}}"
+      bindinput="onPriceChange"
+    />
+  </view>
+
+  <view class="form-group">
+    <input
+      placeholder="请输入折扣"
+      type="number"
+      value="{{room.discount}}"
+      bindinput="onDiscountChange"
+    />
+  </view>
+
+  <view class="form-group">
+    <input
+      placeholder="请输入面积 (㎡)"
+      type="number"
+      value="{{room.area}}"
+      bindinput="onAreaChange"
+    />
+  </view>
+
+  <view class="form-group">
+    <input
+      placeholder="最大入住人数"
+      type="number"
+      value="{{room.max_number_of_guest}}"
+      bindinput="onMaxGuestsChange"
+    />
+  </view>
+
+  <button bindtap="onSubmit">提交新房间</button>
+</view>

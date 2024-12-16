@@ -1,0 +1,51 @@
+/* pages/register/register.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750rpx;
+  background-color: #f0f0f0;
+  padding: 15% 0 30%;
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 5% 10%;
+  border-radius: 15rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx; /* 间距 */
+}
+
+.form-item {
+  margin-bottom: 30rpx;
+}
+
+
+.input {
+  width: 100%;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  padding: 40rpx;
+  font-size: 25rpx;
+  box-sizing: border-box;
+  height: 18%;
+}
+
+
+.btn {
+  width: 100%;
+  padding: 20rpx;
+  border: none;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 35rpx;
+  cursor: pointer;
+}
+
+.btn-register {
+  background-color: #31ed69;
+}

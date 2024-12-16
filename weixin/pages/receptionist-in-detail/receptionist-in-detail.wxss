@@ -1,0 +1,62 @@
+/* pages/receptionist-in-detail/receptionist-in-detail.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+  background-color: #f0f4f8; /* 浅蓝灰背景 */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx; /* 项目间距 */
+  background-color: #ffffff; /* 白色背景 */
+  padding: 35rpx; /* 内边距 */
+  border-radius: 20rpx; /* 圆角 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+  width: 90%; /* 自适应宽度 */
+}
+
+.order-details, .guest-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  text-align: left;
+}
+
+.person-card {
+  padding: 15rpx;
+  background-color: #f9f9f9;
+  border-radius: 8rpx;
+  border: 1rpx solid #ddd;
+  margin-bottom: 10rpx;
+}
+
+.person-card text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8rpx;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background-color: #43a047;
+}

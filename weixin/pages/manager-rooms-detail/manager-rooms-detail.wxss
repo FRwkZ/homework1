@@ -1,0 +1,78 @@
+/* pages/manager-rooms-detail/manager-rooms-detail.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750rpx;
+  background-color: #f0f0f0;
+  padding: 20% 0 30%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 10%;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+text {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+  align-items: center;
+}
+.center {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  text-align: center; /* 文本居中对齐 */
+  width: 100%; /* 占满容器宽度 */
+}
+
+
+
+input {
+  width: 100%;
+  padding: 15rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  border-color: #4caf50;
+  background-color: #ffffff;
+}
+
+picker {
+  width: 100%;
+  padding: 15rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  background-color: #f9f9f9;
+}
+
+button {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8rpx;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #43a047;
+}

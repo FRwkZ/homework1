@@ -1,0 +1,65 @@
+/* pages/manager-rooms/manager-rooms.wxss */
+
+/* 页面容器 */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 视口高度，保证布局自适应 */
+  padding: 20rpx 10% 20rpx;
+  background-color:  #f0f0f0; /* 浅灰背景 */
+  box-sizing: border-box;
+}
+
+/* 房间列表容器 */
+.rooms-container {
+  flex: 1; /* 占满剩余空间 */
+  overflow-y: auto; /* 启用垂直滚动 */
+  background-color: #ffffff; /* 白色背景 */
+  border-radius: 10rpx; /* 圆角 */
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+  padding: 15rpx;
+  margin-bottom: 20rpx; /* 与按钮的间距 */
+}
+
+/* 房间卡片 */
+.room-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  margin-bottom: 15rpx; /* 卡片之间的间距 */
+  border-radius: 10rpx; /* 圆角 */
+  background-color: #e8f5e9; /* 浅绿色背景 */
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+  font-size: 30rpx;
+  color: #333333; /* 字体颜色 */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* 鼠标悬停时房间卡片效果 */
+.room-card:hover {
+  background-color: #c8e6c9; /* 深绿色背景 */
+  transform: scale(1.02); /* 放大效果 */
+}
+
+/* 新建按钮 */
+button {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff; /* 白色字体 */
+  background-color: #4caf50; /* 绿色背景 */
+  border: none;
+  border-radius: 10rpx; /* 圆角 */
+  cursor: pointer;
+  box-shadow: 0 3rpx 10rpx rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 鼠标悬停时按钮效果 */
+button:hover {
+  background-color: #43a047; /* 深绿色背景 */
+  box-shadow: 0 5rpx 15rpx rgba(0, 0, 0, 0.2); /* 增强阴影 */
+}

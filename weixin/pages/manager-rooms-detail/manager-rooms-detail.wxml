@@ -1,0 +1,55 @@
+<!--pages/manager-rooms-detail/manager-rooms-detail.wxml-->
+<view class="container">
+  <view class="form">
+    <view class="center">
+    <text>房间编号: {{room.id}}</text>
+    </view>
+    
+    <!-- 房型选择 -->
+    <picker mode="selector" range="{{roomTypeOptions}}" value="{{roomTypeIndex}}" bindchange="onRoomTypeChange">
+      <view>房型: {{roomTypeOptions[roomTypeIndex]}}</view>
+    </picker>
+
+    <!-- 房间价格 -->
+    <input
+      placeholder="价格"
+      type="number"
+      value="{{room.price}}"
+      bindinput="onInputChange"
+      data-field="price"
+    />
+
+    <!-- 折扣 -->
+    <input
+      placeholder="折扣 (0-1)"
+      type="number"
+      value="{{room.discount}}"
+      bindinput="onInputChange"
+      data-field="discount"
+    />
+
+    <!-- 面积 -->
+    <input
+      placeholder="面积 (㎡)"
+      type="number"
+      value="{{room.area}}"
+      bindinput="onInputChange"
+      data-field="area"
+    />
+
+    <!-- 最大入住人数 -->
+    <input
+      placeholder="最大入住人数"
+      type="number"
+      value="{{room.max_number_of_guest}}"
+      bindinput="onInputChange"
+      data-field="max_number_of_guest"
+    />
+
+    <!-- 是否被占用 -->
+    <picker mode="selector" range="{{['否', '是']}}" value="{{room.is_occupied ? 1 : 0}}" bindchange="onOccupiedChange">
+      <view>是否被占用: {{room.is_occupied ? "是" : "否"}}</view>
+    </picker>
+    <button bindtap="onSaveRoom">保存修改</button>
+  </view>
+</view>

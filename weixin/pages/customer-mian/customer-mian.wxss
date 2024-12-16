@@ -1,0 +1,38 @@
+/* pages/customer-mian/customer-mian.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750rpx;
+  background-color: #f0f0f0;
+  padding: 20% 0 30%;
+}
+.container {
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 5% 10%;
+  border-radius: 15rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 35rpx; /* 间距 */
+}
+.btn {
+  width: 100%;
+  padding: 20rpx;
+  border: none;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 35rpx;
+  cursor: pointer;
+}
+.btn-1{
+  background-color: #79f328;
+}
+.btn-2{
+  background-color: #fc8b21;
+}
+.btn-3{
+  background-color: #b925e6;
+}

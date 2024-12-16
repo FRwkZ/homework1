@@ -1,0 +1,38 @@
+/* pages/goods/goods.wxss */
+/* 容器样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #f5f5f5; /* 浅灰背景 */
+  min-height: 100vh; /* 全屏高度 */
+  overflow-y: auto; /* 启用垂直滚动 */
+  gap: 20rpx; /* 卡片间距 */
+}
+
+
+/* 账单卡片样式 */
+.bill-card {
+  width: 90%;
+  background-color: #ffffff; /* 白色背景 */
+  padding: 30rpx;
+  border-radius: 16rpx; /* 圆角 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+  cursor: pointer;
+  margin-top: 20rpx; /* 从上到下分布的间距 */
+}
+
+/* 账单卡片文字样式 */
+.bill-card text {
+  font-size: 30rpx;
+  color: #555; /* 深灰文字 */
+}
+
+/* 鼠标悬停时卡片背景变化（仅在小程序开发工具中有效） */
+.bill-card:hover {
+  background-color: #f0f0f0; /* 浅灰背景 */
+}

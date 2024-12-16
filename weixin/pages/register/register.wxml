@@ -1,0 +1,6 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <input class="input" placeholder="请输入用户名" bindinput="onUsernameChange" />
+  <input class="input" placeholder="请输入密码" password="true" bindinput="onPasswordChange" />
+  <button class="btn btn-register" bindtap="onRegister">注册</button>
+</view>

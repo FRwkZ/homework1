@@ -1,0 +1,11 @@
+<!--pages/goods/goods.wxml-->
+
+<view class="container">
+  <block wx:for="{{bills}}" wx:key="id">
+    <view class="bill-card" bindtap="goToConsumption" data-bill-id="{{item.id}}">
+      <text>账单编号: {{item.id}}</text>
+      <text>总金额: ¥{{item.total_price}}</text>
+      <text>入住时间: {{item.check_in_time}}</text>
+    </view>
+  </block>
+</view>

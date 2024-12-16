@@ -1,0 +1,6 @@
+<!--pages/customer-mian/customer-mian.wxml-->
+<view class='container'>
+    <button class="btn btn-1" bindtap="btn1">预定订单</button>
+    <button class="btn btn-2" bindtap="btn2">消费</button>
+    <button class="btn btn-3" bindtap="btn3">查看订单</button>
+</view>

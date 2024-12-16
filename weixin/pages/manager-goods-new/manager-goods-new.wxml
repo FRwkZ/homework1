@@ -1,0 +1,40 @@
+<!--pages/manager-goods-new/manager-goods-new.wxml-->
+<view class="container">
+
+  <view class="form-group">
+    <input
+      placeholder="请输入名称"
+      type="string"
+      value="{{commoditys.Commodityname}}"
+      bindinput="onNameChange"
+    />
+  </view>
+  <view class="form-group">
+    <input
+      placeholder="请输入价格"
+      type="number"
+      value="{{commoditys.price}}"
+      bindinput="onPriceChange"
+    />
+  </view>
+
+  <view class="form-group">
+    <input
+      placeholder="请输入折扣"
+      type="number"
+      value="{{commoditys.discount}}"
+      bindinput="onDiscountChange"
+    />
+  </view>
+
+  <view class="form-group">
+    <input
+      placeholder="请输库存"
+      type="number"
+      value="{{commoditys.number}}"
+      bindinput="onNumberChange"
+    />
+  </view>
+
+  <button bindtap="onSubmit">提交新商品</button>
+</view>

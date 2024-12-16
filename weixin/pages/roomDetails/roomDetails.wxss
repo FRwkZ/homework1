@@ -1,0 +1,50 @@
+/* pages/roomDetails/roomDetails.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+  background-color: #f9f9f9; /* 浅灰背景色 */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx; /* 间距 */
+  background-color: #ffffff; /* 白色背景 */
+  padding: 40rpx; /* 内边距 */
+  border-radius: 15rpx; /* 圆角 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+  width: 90%; /* 自适应宽度 */
+}
+
+.room-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx; /* 文本行之间的间距 */
+  font-size: 30rpx; /* 字体大小 */
+  color: #333; /* 深灰字体 */
+}
+
+.room-detail text {
+  line-height: 40rpx; /* 增加文本行高 */
+}
+
+button {
+  width: 100%;
+  padding: 20rpx; /* 按钮内边距 */
+  font-size: 32rpx; /* 字体大小 */
+  font-weight: bold;
+  color: #ffffff; /* 白色字体 */
+  background-color: #4caf50; /* 绿色背景 */
+  border: none;
+  border-radius: 10rpx; /* 圆角 */
+  cursor: pointer;
+  box-shadow: 0 3rpx 10rpx rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #43a047; /* 按钮变深 */
+  box-shadow: 0 5rpx 15rpx rgba(0, 0, 0, 0.2); /* 鼠标悬停阴影增强 */
+}

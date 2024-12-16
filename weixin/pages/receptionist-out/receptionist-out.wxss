@@ -1,0 +1,31 @@
+/* pages/receptionist-out/receptionist-out.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20rpx;
+  background-color: #f5f5f5;
+}
+
+.bills-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  padding: 15rpx;
+}
+
+.bill-card {
+  padding: 20rpx;
+  margin-bottom: 15rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.bill-card.pending {
+  background-color: #fff3cd; /* 黄色背景，未完成账单 */
+}
+
+.bill-card.completed {
+  background-color: #d4edda; /* 绿色背景，已完成账单 */
+}

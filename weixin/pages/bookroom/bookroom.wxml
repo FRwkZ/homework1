@@ -1,0 +1,23 @@
+<!--pages/bookroom/bookroom.wxml-->
+<view class="container">
+  <!-- 分店选择 -->
+  <view class="branch-selection">
+    <picker bindchange="onBranchChange" range="{{branches}}" range-key="name">
+      <view class="picker">
+        当前分店: {{selectedBranch ? selectedBranch.name : "请选择分店"}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 房间显示区域 -->
+  <scroll-view class="rooms-container" scroll-y>
+    <block wx:for="{{rooms}}" wx:key="id">
+      <view class="room-card" bindtap="onRoomClick" data-id="{{item.id}}">
+        <text>{{item.roomtype}}-{{item.id}}</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 预定按钮 -->
+  <button bindtap="onReserveClick" wx:if="{{selectedRoom}}">预定</button>
+</view>

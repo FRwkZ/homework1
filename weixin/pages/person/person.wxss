@@ -1,0 +1,56 @@
+/* pages/person/person.wxss */
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.bill-card {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bill-order-id {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bill-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bill-status {
+  margin-top: 10px;
+}
+
+.payment-status, .finish-status {
+  font-size: 14px;
+  color: #999;
+}
+
+.paid {
+  color: #4CAF50;
+}
+
+.unpaid {
+  color: #FF5722;
+}
+
+.finish {
+  color: #2196F3;
+}
+
+.unfinish {
+  color: #FF9800;
+}

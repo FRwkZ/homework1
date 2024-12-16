@@ -1,0 +1,67 @@
+/* pages/manager-goods-new/manager-goods-new.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750rpx;
+  background-color: #f0f0f0;
+  padding: 10% 0 30%;
+}
+.container {
+  padding: 20rpx 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+input {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 30rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  border-color: #4caf50;
+  background-color: #ffffff;
+}
+
+button {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 10rpx;
+  cursor: pointer;
+  box-shadow: 0 3rpx 10rpx rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #43a047;
+  box-shadow: 0 5rpx 15rpx rgba(0, 0, 0, 0.2);
+}
+
+.picker {
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  text-align: left;
+}

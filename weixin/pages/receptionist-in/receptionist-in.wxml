@@ -1,0 +1,14 @@
+<!--pages/receptionist-in/receptionist-in.wxml-->
+<view class="container">
+  <scroll-view class="orders-container" scroll-y>
+    <block wx:for="{{orders}}" wx:key="order_number">
+      <view
+        class="order-card {{item.order_status === 1 ? 'completed' : 'pending'}}"
+        bindtap="onOrderClick"
+        data-order_id="{{item.order_id}}"
+      >
+        <text>订单编号: {{item.order_id}}  用户编号:{{item.user_id}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

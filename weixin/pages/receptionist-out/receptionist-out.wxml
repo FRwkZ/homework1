@@ -1,0 +1,14 @@
+<!--pages/receptionist-out/receptionist-out.wxml-->
+<view class="container">
+  <scroll-view class="bills-container" scroll-y>
+    <block wx:for="{{bills}}" wx:key="bill_id">
+      <view
+        class="bill-card {{item.finish_status === 'finish' ? 'completed' : 'pending'}}"
+        bindtap="onBillClick"
+        data-bill_id="{{item.id}}"
+      >
+        <text>账单编号: {{item.id}} 用户编号: {{item.userid}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

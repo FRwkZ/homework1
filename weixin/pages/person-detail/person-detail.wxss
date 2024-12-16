@@ -1,0 +1,48 @@
+/* pages/person-detail/person-detail.wxss */
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.bill-detail-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bill-detail-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #333;
+}
+
+.pay-button {
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.pay-button:active {
+  background-color: #388E3C;
+}

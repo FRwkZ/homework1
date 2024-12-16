@@ -1,0 +1,5 @@
+<!--pages/receptionist-mian/receptionist-mian.wxml-->
+<view class='container'>
+    <button class="btn btn-1" bindtap="btn1">办理入住手续</button>
+    <button class="btn btn-2" bindtap="btn2">办理退房手续</button>
+</view>

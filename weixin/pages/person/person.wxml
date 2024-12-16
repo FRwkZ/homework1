@@ -1,0 +1,20 @@
+<!--pages/person/person.wxml-->
+<view class="container">
+  <!-- 账单列表 -->
+  <block wx:for="{{bills}}" wx:key="id">
+    <view class="bill-card" bindtap="onBillClick" data-bill_id="{{item.id}}">
+      <view class="bill-header">
+        <text class="bill-order-id">订单号: {{item.id}}</text>
+        <text class="bill-price">总价: ¥{{item.total_price}}</text>
+      </view>
+      <view class="bill-status">
+        <text class="payment-status">
+          支付状态: <text class="{{item.payment_status === 'paid' ? 'paid' : 'unpaid'}}">{{item.payment_status === 'paid' ? '已支付' : '未支付'}}</text>
+        </text>
+        <text class="finish-status">
+          完成状态: <text class="{{item.finish_status === 'finish' ? 'finish' : 'unfinish'}}">{{item.finish_status === 'finish' ? '已完成' : '未完成'}}</text>
+        </text>
+      </view>
+    </view>
+  </block>
+</view>

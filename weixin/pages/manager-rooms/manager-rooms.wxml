@@ -1,0 +1,14 @@
+<!--pages/manager-rooms/manager-rooms.wxml-->
+  
+  <view class="container">
+  <!-- 房间显示区域 -->
+    <scroll-view class="rooms-container" scroll-y>
+    <block wx:for="{{rooms}}" wx:key="id">
+      <view class="room-card" bindtap="onRoomClick" data-id="{{item.id}}">
+        <text>{{item.roomtype}}-{{item.id}}</text>
+      </view>
+    </block>
+    </scroll-view>
+  <!-- 新建按钮 -->
+  <button bindtap="onnewClick" >新建</button>
+  </view>

@@ -1,0 +1,23 @@
+<!--pages/receptionist-in-detail/receptionist-in-detail.wxml-->
+<view class="container">
+  <view class="order-details">
+    <text class="section-title">订单详情:</text>
+    <text>订单编号: {{order.order_number}}</text>
+    <text>房间编号: {{order.room_number}}</text>
+    <text>入住时间: {{order.check_in_date}}</text>
+    <text>退房时间: {{order.check_out_date}}</text>
+  </view>
+
+  <view class="guest-details">
+    <text class="section-title">人员信息:</text>
+    <block wx:for="{{persons}}" wx:key="id_card">
+      <view class="person-card">
+        <text>姓名: {{item.name}}</text>
+        <text>身份证号: {{item.id_card}}</text>
+        <text>手机号: {{item.phone_number}}</text>
+      </view>
+    </block>
+  </view>
+
+  <button class="confirm-btn" bindtap="onConfirm">确认订单并生成账单</button>
+</view>

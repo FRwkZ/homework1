@@ -1,0 +1,37 @@
+<!--pages/reservation/reservation.wxml-->
+<view class="container">
+  <view wx:for="{{persons}}" wx:key="id" class="person-input">
+    <input
+      placeholder="姓名"
+      value="{{item.name}}"
+      bindinput="onNameChange"
+      data-index="{{index}}"
+    />
+    <input
+      placeholder="身份证号"
+      value="{{item.id_card}}"
+      bindinput="onIdCardChange"
+      data-index="{{index}}"
+    />
+    <input
+      placeholder="电话"
+      value="{{item.phone}}"
+      bindinput="onPhoneChange"
+      data-index="{{index}}"
+    />
+  </view>
+  <button bindtap="onAddPerson">添加人员</button>
+  <view class="picker-view">
+  <!-- 入住日期选择 -->
+  <picker bindchange="onDateChange" data-mode="checkIn"  mode="date">
+    <view>入住日期: {{checkInDate || "请选择"}}</view>
+  </picker>
+
+  <!-- 退房日期选择 -->
+  <picker bindchange="onDateChange" data-mode="checkOut" mode="date">
+    <view>退房日期: {{checkOutDate || "请选择"}}</view>
+  </picker>
+  </view>
+
+  <button bindtap="onSubmit">提交订单</button>
+</view>

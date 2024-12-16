@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/main/mian",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/goods/goods",
+    "pages/person/person",
+    "pages/consumption/consumption",
+    "pages/person-detail/person-detail",
+    "pages/bookroom/bookroom",
+    "pages/roomDetails/roomDetails",
+    "pages/reservation/reservation",
+    "pages/customer-mian/customer-mian",
+    "pages/receptionist-mian/receptionist-mian",
+    "pages/receptionist-in/receptionist-in",
+    "pages/receptionist-in-detail/receptionist-in-detail",
+    "pages/receptionist-out/receptionist-out",
+    "pages/receptionist-out-detail/receptionist-out-detail",
+    "pages/manager-mian/manager-mian",
+    "pages/manager-goods/manager-goods",
+    "pages/manager-goods-new/manager-goods-new",
+    "pages/manager-goods-detail/manager-goods-detail",
+    "pages/manager-rooms/manager-rooms",
+    "pages/manager-rooms-new/manager-rooms-new",
+    "pages/manager-rooms-detail/manager-rooms-detail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

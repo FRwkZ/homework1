@@ -1,0 +1,13 @@
+<!--pages/roomDetails/roomDetails.wxml-->
+<view class="container">
+  <view class="room-detail">
+    <text>编号: {{room.id}}</text>
+    <text>房型: {{room.roomtype}}</text>
+    <text>价格: ￥{{room.price}}</text>
+    <text>折扣: {{room.discount}}</text>
+    <text>面积: {{room.area}}㎡</text>
+    <text>最大入住人数: {{room.max_number_of_guest}}</text>
+    <text>是否占用: {{room.is_occupied ? "是" : "否"}}</text>
+  </view>
+  <button bindtap="onConfirmRoom">确认选择</button>
+</view>

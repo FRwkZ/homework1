@@ -1,0 +1,5 @@
+<!--pages/manager-mian/manager-mian.wxml-->
+<view class='container'>
+    <button class="btn btn-1" bindtap="btn1">修改房间信息</button>
+    <button class="btn btn-2" bindtap="btn2">修改商品信息</button>
+</view>
